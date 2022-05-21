@@ -1,0 +1,32 @@
+<Page x:Class="Exercise3.ReplaceM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise3" mc:Ignorable="d"
+        Height="250" Width="450">
+    <Grid Style="{DynamicResource ThemeGrid}">
+        <TextBlock Style="{DynamicResource ThemeText}" MouseDown="Drag" Text="220_Смирнов_ПР№3" HorizontalAlignment="Left"
+                Margin="5 0 0 0" TextAlignment="Center" FontSize="10"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Replace - метод замены подстроки в строке" HorizontalAlignment="Center"
+                Margin="0 30 0 0" Width="250" TextAlignment="Center" Height="45" FontSize="14"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Начальная строка" Width="150" HorizontalAlignment="Left" Margin="65 145 0 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Width="150" Text="Заменяемая подстрока: " Margin="0 85 75 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Width="150" Text="Заменяевшая строка: " Margin="0 115 75 0"/>
+
+        <Button Click="ReplaceString" Content="Заменить" Style="{DynamicResource ThemeButton}" Margin="0 180 10 0"/>
+        <Button Click="BackReplace" Content="Назад" Style="{DynamicResource ThemeButton}" Margin="0 210 10 0"/>
+        <Button Style="{DynamicResource ThemeExit}" Click="Exit"/>
+        <Button Style="{DynamicResource ThemeDeactivate}" Click="Deact"/>
+
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="200" Name="stringOne" TextWrapping="Wrap" 
+                ToolTip="Строка, из которой нужно удалить символы" Margin="15 80 0 0" HorizontalAlignment="Left"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="20" Width="70" Name="stringReplace" TextWrapping="Wrap"
+                ToolTip="Индекс, с которого нужно удалить символы" Margin="0 85 15 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="20" Width="70" Name="stringWithReplace" TextWrapping="Wrap"
+                ToolTip="Количество символов, которые нужно удалить" Margin="0 115 15 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="330" Name="stringResult" TextWrapping="Wrap"
+                ToolTip="Результат удаления символов" IsReadOnly="True" Margin="15 175 0 0" HorizontalAlignment="Left"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,31 @@
+<Page x:Class="Exercise3.InsertM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise3" mc:Ignorable="d"
+        Height="250" Width="450">
+    <Grid Style="{DynamicResource ThemeGrid}">
+        <TextBlock Style="{DynamicResource ThemeText}" Text="220_Смирнов_ПР№3" HorizontalAlignment="Left"
+                    Margin="5 0 0 0" TextAlignment="Center" FontSize="10" MouseDown="Drag"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Insert - метод для вставки подстроки в строку" HorizontalAlignment="Center"
+                    Margin="0 30 0 0" Width="250" TextAlignment="Center" Height="45" FontSize="14"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Исходная строка" Width="150" HorizontalAlignment="Left" Margin="65 145 0 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Width="120" Text="Вставка" Margin="0 145 22 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Width="120" Text="Индекс: " Margin="0 185 50 0"/>
+
+        <Button Click="InsertString" Content="Вставить" Style="{DynamicResource ThemeButton}" Margin="0 215 95 0"/>
+        <Button Click="BackInsert" Content="Назад" Style="{DynamicResource ThemeButton}" Margin="0 215 10 0"/>
+        <Button Style="{DynamicResource ThemeExit}" Click="Exit"/>
+        <Button Style="{DynamicResource ThemeDeactivate}" Click="Deact"/>
+
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="200" Name="stringOne" TextWrapping="Wrap"
+                ToolTip="Строка для вставки" Margin="15 80 0 0" HorizontalAlignment="Left"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="200" Name="stringTwo" TextWrapping="Wrap"
+                ToolTip="Строка, которую нужно вставить" Margin="0 80 15 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="20" Width="110" Name="stringIndex"
+                ToolTip="Индекс для вставки" Margin="0 185 10 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="250" Name="stringResult" TextWrapping="Wrap"
+                ToolTip="Результат вставки подстроки в строку" IsReadOnly="True" Margin="15 175 0 0" HorizontalAlignment="Left"/>
+    </Grid>
+</Page>

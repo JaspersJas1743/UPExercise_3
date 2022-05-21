@@ -1,0 +1,29 @@
+<Page x:Class="Exercise3.SplitM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise3" mc:Ignorable="d"
+        Height="250" Width="450">
+    <Grid Style="{DynamicResource ThemeGrid}">
+        <TextBlock Style="{DynamicResource ThemeText}" Text="220_Смирнов_ПР№3" HorizontalAlignment="Left"
+                Margin="5 0 0 0" TextAlignment="Center" FontSize="10" MouseDown="Drag"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Split - метод разбиения строки на массив подстрок" HorizontalAlignment="Center"
+                Margin="0 30 0 0" Width="250" TextAlignment="Center" Height="45" FontSize="14"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Начальная строка" Width="150" HorizontalAlignment="Left" Margin="90 145 0 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Разделитель" HorizontalAlignment="Right" Margin="0 125 20 0"/>
+
+        <Button Click="SplitString" Content="Разбить" Style="{DynamicResource ThemeButton}" Margin="0 180 10 0"/>
+        <Button Click="BackSplit" Content="Назад" Style="{DynamicResource ThemeButton}" Margin="0 210 10 0"/>
+        <Button Style="{DynamicResource ThemeExit}" Click="Exit"/>
+        <Button Style="{DynamicResource ThemeDeactivate}" Click="Deact"/>
+
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="260" Name="stringOne" TextWrapping="Wrap" 
+                Margin="15 80 0 0" HorizontalAlignment="Left" ToolTip="Строка, которую нужно разбить"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="20" Width="150" Name="stringIndex" TextWrapping="Wrap"
+                ToolTip="Подстрока, по которой нужно разбить" Margin="0 100 10 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="330" VerticalScrollBarVisibility="Auto" Name="stringResult" TextWrapping="Wrap"
+                ToolTip="Массив подстрок, где каждый элемент на новой строке" IsReadOnly="True" Margin="15 175 0 0" HorizontalAlignment="Left">
+        </TextBox>
+    </Grid>
+</Page>

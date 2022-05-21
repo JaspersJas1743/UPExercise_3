@@ -1,0 +1,28 @@
+<Page x:Class="Exercise3.IndexOfM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercise3" mc:Ignorable="d"
+        Height="260" Width="450">
+	<Grid Style="{DynamicResource ThemeGrid}">
+        <TextBlock Style="{DynamicResource ThemeText}" Text="220_Смирнов_ПР№3" HorizontalAlignment="Left"
+                Margin="5 0 0 0" TextAlignment="Center" FontSize="10" MouseDown="Drag"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="IndexOf/LastIndexOf - метод поиска первого/последнего вхождения элемента" HorizontalAlignment="Center"
+                Margin="0 30 0 0" Width="250" TextAlignment="Center" Height="45" FontSize="14"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Text="Исследуемая строка" Width="150" HorizontalAlignment="Left" Margin="65 145 0 0"/>
+        <TextBlock Style="{DynamicResource ThemeText}" Width="120" Text="Искомая подстрока" Margin="0 145 50 0"/>
+
+        <Button Click="IndexOfString" Content="Найти" Style="{DynamicResource ThemeButton}" Margin="0 180 10 0"/>
+        <Button Click="BackIndexOf" Content="Назад" Style="{DynamicResource ThemeButton}" Margin="0 210 10 0"/>
+        <Button Style="{DynamicResource ThemeExit}" Click="Exit"/>
+        <Button Style="{DynamicResource ThemeDeactivate}" Click="Deact"/>
+
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="200" Name="stringOne" TextWrapping="Wrap" 
+                ToolTip="Строка, в которой нужно найти индекс подстроки" Margin="15 80 0 0" HorizontalAlignment="Left"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="60" Width="200" Name="stringTwo" TextWrapping="Wrap"
+                ToolTip="Подстрока, первое вхождение которой нужно найти в искомой строке" Margin="0 80 15 0"/>
+        <TextBox Style="{DynamicResource ThemeBox}" Height="70" Width="330" Name="stringResult" TextWrapping="Wrap"
+                ToolTip="Индекс подстроки в искомой строке" IsReadOnly="True" Margin="15 175 0 0" HorizontalAlignment="Left"/>
+        </Grid>
+</Page>
