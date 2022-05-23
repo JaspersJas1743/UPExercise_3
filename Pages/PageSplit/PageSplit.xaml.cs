@@ -12,6 +12,7 @@ using System.Windows.Documents;
 using System.Windows.Navigation;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
+using System.Text.RegularExpressions;
 
 namespace Exercise3
 {
@@ -21,7 +22,7 @@ namespace Exercise3
         
         private void Exit(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
 
-        private void SplitString(object sender, RoutedEventArgs e) { stringResult.Text = string.Join("\n", stringOne.Text.Split(stringIndex.Text)); }
+        private void SplitString(object sender, RoutedEventArgs e) { stringResult.Text = string.Join("\n", Regex.Split(stringOne.Text, stringIndex.Text)); }
 
         private void Deact(object sender, RoutedEventArgs e) { Application.Current.MainWindow.WindowState = WindowState.Minimized; }
         
