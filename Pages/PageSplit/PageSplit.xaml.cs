@@ -22,7 +22,7 @@ namespace Exercise3
         
         private void Exit(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
 
-        private void SplitString(object sender, RoutedEventArgs e) { stringResult.Text = string.Join("\n", Regex.Split(stringOne.Text, stringIndex.Text)); }
+        private void SplitString(object sender, RoutedEventArgs e) { stringResult.Text = string.Join("\n", Regex.Split(stringOne.Text, stringIndex.Text)).Trim(); }
 
         private void Deact(object sender, RoutedEventArgs e) { Application.Current.MainWindow.WindowState = WindowState.Minimized; }
         
